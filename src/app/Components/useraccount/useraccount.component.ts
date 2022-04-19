@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from 'src/app/Services/dataservice.service';
+import { User } from 'src/app/Classes/user';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-useraccount',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UseraccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataservice:DataserviceService) { }
 
   ngOnInit(): void {
   }

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     this.dataservice.getGithubUserData().subscribe(
       data => {
         this.user = data
-      console.log( this.user)
+      // console.log( this.user)
   }
     )
 
