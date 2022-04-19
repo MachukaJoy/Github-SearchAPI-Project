@@ -4,8 +4,19 @@ import { RouterModule, Routes } from '@angular/router';
 // import { HeroesComponent } from './heroes/heroes.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { SearchComponent } from './Components/search/search.component';
+import { HomeComponent } from './Components/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: "home",
+    component: HomeComponent,
+    },
+  
+    {
+      path: "search",
+      component: SearchComponent,
+      },
+];
 
 @NgModule({
   declarations: [],
