@@ -5,17 +5,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { SearchComponent } from './Components/search/search.component';
 import { HomeComponent } from './Components/home/home.component';
+import { UseraccountComponent } from './Components/useraccount/useraccount.component';
 
 const routes: Routes = [
   {
     path: "home",
     component: HomeComponent,
-    },
-  
-    {
-      path: "search",
-      component: SearchComponent,
-      },
+  },
+
+  {
+    path: "search",
+    component: SearchComponent,
+  },
+  {
+    path: "user/:id",
+    component: UseraccountComponent,
+  },
+  { path: '', redirectTo: "/home", pathMatch: "full" },
+
 ];
 
 @NgModule({
