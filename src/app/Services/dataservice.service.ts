@@ -8,6 +8,23 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataserviceService {
+  myKey:string = environment.apiKey;
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+  getGithubUserData(githubUsername:string) {
+    return this.http
+    .get<User>(
+      `https://api.github.com/users/${githubUsername}`
+    )
+    // .toPromise ();
+  }
+
+  getUserRepositoryData(githubUsername:string){
+    return this.http
+    .get<Repo[]>(
+      ``
+    )
+
+
+  }
 }
