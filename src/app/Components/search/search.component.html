@@ -1,9 +1,9 @@
 <nav class="navbar navbar-light bg-light">
-  <form class="container-fluid">
+  <form class="container-fluid" role="form" [formGroup]="githubsearchForm" (ngSubmit)="getUser()">
     <div class="input-group">
       <span class="input-group-text" id="basic-addon1">@</span>
       <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-      <button type="submit" class="btn btn-default">Search</button>
+      <button type="submit" [disabled]="!githubsearchForm.valid" class="btn btn-default">Search</button>
     </div>
   </form>
 </nav>

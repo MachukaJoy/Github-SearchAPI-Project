@@ -7,6 +7,7 @@ import { SearchComponent } from './Components/search/search.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './Components/home/home.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HomeComponent } from './Components/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
