@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './Components/home/home.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { UseraccountComponent } from './Components/useraccount/useraccount.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     NavbarComponent,
     SearchComponent,
-    HomeComponent
+    HomeComponent,
+    UseraccountComponent
   ],
   imports: [
     BrowserModule,
