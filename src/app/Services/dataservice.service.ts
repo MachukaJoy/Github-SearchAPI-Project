@@ -9,10 +9,10 @@ import {observable, Observable} from 'rxjs'
   providedIn: 'root'
 })
 export class DataserviceService {
+  user="any";
   username= "MachukaJoy";
   MYKEY: string = environment.apiKey;
   USERAPIURL = `https://api.github.com/users/${this.username}`
-  USERREPOURL = `https://api.github.com/users/${this.username}/repos`
 
   constructor(private http:HttpClient) { 
     console.log('Fetching data')
@@ -25,18 +25,15 @@ export class DataserviceService {
 
   }
   getGithubUserRepoData():Observable<any> {
-    return this.http.get<any>(this.USERREPOURL)
-
+    return this.http.get<any>(`https://api.github.com/users/${this.username}/repos`)
 
   }
   getUserData(username:string){
-    return this.http.get<User>(
-      `https://api.github.com/users/${username}`)
+    return this.http.get<User>(`https://api.github.com/users/'${this.username}'?acess_token=${this.MYKEY}`);
   }
 
   getUserRepos(githubUsername:string){
-    return this.http.get<Repo>(
-      `https://api.github.com/users/${this.username}/repos?order=created&sort=desc?access_token=${this.MYKEY}`)
+    return this.http.get<Repo>(`https://api.github.com/users/${this.username}/repos?order=created&sort=asc?access_token=${this.MYKEY}`)
 
 }
 updateusername(username:string){

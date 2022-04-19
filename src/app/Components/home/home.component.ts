@@ -17,15 +17,15 @@ export class HomeComponent implements OnInit {
     this.dataservice.getGithubUserData().subscribe(
       data => {
         this.user = data
-      // console.log( this.user)
+      console.log( this.user)
   }
     )
 
     // My repositories
-    this.dataservice.getGithubUserRepoData().subscribe((data) => {
-      this.userRepositories = data;
-      console.log(this.userRepositories);
-    });
+    this.dataservice.getGithubUserRepoData().subscribe(data => {
+      this.userRepositories = data
+      // console.log(this.userRepositories);
+    }
+    )
   }
-
 }
