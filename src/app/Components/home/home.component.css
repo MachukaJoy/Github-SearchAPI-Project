@@ -2,6 +2,15 @@ img{
   width: 50%;
   border-radius: 50%;
 }
+#ul{
+  list-style-type:none;
+}
 .lists{
   display: flex;
+} 
+#profile{
+  margin:10% 0 0 0;
+}
+.card-footer a{
+  text-decoration:none;
 } 
