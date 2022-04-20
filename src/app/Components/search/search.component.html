@@ -1,7 +1,7 @@
 <div class="cointainer">
   <p><br><br><br></p>
   <nav class="navbar navbar-light bg-light">
-    <form action="" class="container-fluid" role="form" #githubsearchform="ngForm" ngSubmit = "getGithubUserData()" >
+    <form action="" class="container-fluid" role="form" #githubsearchform="ngForm" (ngSubmit)="getUser(githubsearchform)" >
       <div class="input-group">
         <span class="input-group-text" id="basic-addon1">@</span>
         <input id ="search" type="text" class="form-control" [(ngModel)]="searchingName" name="searchingName" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
