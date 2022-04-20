@@ -5,37 +5,44 @@
       <P class="lead">Git Hub search using API </P>
     </div>
     <div class="row">
-      <div class="col-md-4 "id="profile" *ngIf = "user">
+      <div class="col-md-4 text-center"id="profile" *ngIf = "user">
         <h3 id="name">{{user.name}}</h3>
-        <img src="{{user.avatar_url}}" alt="github Profile image">
+        <img src="{{user.avatar_url}}" alt="Profile image">
         <h6>{{user.bio}}</h6>
-        <h6>Date joined:<b>{{user.created_at | date}}</b></h6>
-        <h6> Repositories : <b>{{user.public_repos}}</b></h6>
-        <h6> {{user.followers}} Followers</h6> 
-        <h6> {{user.following}} Following</h6>
-        <a href="{{user.html_url}}"><button class="btn btn-warning">view from Github</button></a>
+        <h6> Date joined: <b>{{user.created_at | date}}</b></h6>
+        <h6> Repositories: <b>{{user.public_repos}}</b></h6>
+        <h6> Followers: {{user.followers}}  </h6> 
+        <h6> Following:  {{user.following}} </h6>
+        <a href="{{user.html_url}}"><button class="btn btn-secondary">Go to Github</button></a>
 
       </div>
 
       <div class="col-md-8">
-        <h3 class='text-center'>{{user.name}} Repositories</h3>
+        <p> </p>
+        <div class="col-md-6">
+          <h3 class='text-center'> Repositories</h3>
+        </div>
         <div class="col-md-12">
+          
           <ul *ngFor="let userRepository of userRepositories" id="ul">
             <li class="list">
               <div class="card col-md-6" appHighlight>
-                <div class="card-title text-center fw-bold">{{userRepository.name}}</div>
-                <div class="card-body">{{userRepository.description}}
-                    <br>
-                    <small>License Info: {{userRepository.license.name}}</small>
-                    <br>
-                    <small> {{userRepository.clone_url}}</small>
-                    <br>
-                    <small><i class="fa-solid fa-code-fork"></i><b> {{userRepository.forks}}</b> </small> |
-                    <small><i class="fa-solid fa-star"></i><b> {{userRepository.stargazers_count}} </b> </small>
-                    
+                <div class="card-title text-center fw-bold"> {{userRepository.name}} </div>
+
+
+                <div class="card-body">
+                  <div class="card-title">
+                    {{userRepository.description}}
+                  </div>
+                  <div class="card-text">
+                   
+                  <small><i class="fa-solid fa-code-fork text-info"></i><b class="me-5 text-secondary" > {{userRepository.forks}}</b> </small> 
+                  <small><i class="fa-solid fa-star text-info ms-5"></i><b class="me-5 text-secondary"> {{userRepository.stargazers_count}} </b> </small>
+                  
+                  </div>
                 </div>
                 <div class="card-footer">
-                  <i class="fa-solid fa-file-code"></i> {{userRepository.language}} | <a class = "d-flex justify-content-end"href="{{userRepository.git_url}}"><button class="btn btn-outline-dark">View</button></a>
+                  <span> <b>Tools and Languages: </b>{{userRepository.language}} </span>  <a class = "d-flex justify-content-end"href="{{userRepository.git_url}}"><button class="btn btn-outline-info">View</button></a>
                 </div>
               </div>
 
