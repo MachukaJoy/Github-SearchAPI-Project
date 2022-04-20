@@ -1,11 +1,11 @@
 <div class="container-fluid">
 
-  <div class="container-fluid bg-light">
+  <div class="container-fluid ">
     <div class="text-center">
       <P class="lead">Git Hub search using API </P>
     </div>
     <div class="row">
-      <div class="col-md-4 text-center"id="profile">
+      <div class="col-md-4 text-center"id="profile" >
         <h3 id="name">{{user.name}}</h3>
         <img src="{{user.avatar_url}}" alt="Profile image">
         <h6>{{user.bio}}</h6>
@@ -13,13 +13,13 @@
         <h6> Repositories: <b>{{user.public_repos}}</b></h6>
         <h6> Followers: {{user.followers}}  </h6> 
         <h6> Following:  {{user.following}} </h6>
-        <a href="{{user.html_url}}"><button class="btn btn-secondary">Go to Github</button></a>
+        <a href="{{user.html_url}}"><button class="btn btn-secondary" style="background-color:rgb(238, 164, 127); color: black;border-radius: 50%;">Go to Github</button></a>
 
       </div>
 
       <div class="col-md-8">
         <p> </p>
-        <div class="col-md-6">
+        <div class="col-md-6" >
           <h3 class='text-center'> Repositories</h3>
         </div>
         <div class="col-md-12">

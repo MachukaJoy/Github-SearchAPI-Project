@@ -10,6 +10,7 @@ img{
 } 
 #profile{
   margin:10% 0 0 0;
+  /* background-color: transparent; */
 }
 .card-footer a{
   text-decoration:none;
