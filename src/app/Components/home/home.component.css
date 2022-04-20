@@ -15,3 +15,17 @@ img{
 .card-footer a{
   text-decoration:none;
 } 
+h3{
+  color: rgb(238, 164, 127);
+}
+h6{
+  background-color: rgb(238, 164, 127);
+}
+#homecard{
+  background-color:#a69cac;
+}
+#gitbtn{
+  background-color:rgb(10, 90, 136);
+  color:rgb(250, 162, 135);
+  border-radius: 20%;
+}

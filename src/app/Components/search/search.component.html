@@ -10,14 +10,13 @@
     </form>
   </nav>
   <div class="row" *ngIf="user">
-  <div class="col-md-4 mt-5 text-right">
+  <div class="col-md-5 mt-5 text-right">
     <img id="avatar" src="{{user.avatar_url}}">
-
-
   </div>
+
   <div class="col-md-6 mt-5">
-    <h3 id = "info"> Input user above to see results below:</h3><br>
-    <h6><b>Name :</b> {{user.login}}</h6>
+    <p id = "info"> Input github username above to see results below:</p><br>
+    <h6><b>Name :</b> {{ user.login}}</h6>
     <br>
     <h6> <b>Bio</b> :<em><strong>{{user.bio}}</strong></em></h6>
     <br>
@@ -27,9 +26,9 @@
     <br>
     <h6> Repositories {{user.public_repos}} </h6>
     <br>
-    <h6> <i class="fa-solid fa-calendar-check"></i> Last Update :{{user.updated_at | date }}</h6>
+    <h6> Last Update: {{ user.updated_at | datepip }}</h6>
     <br>
-    <a href="{{user.html_url}}"><button class="btn" id="gobtn"> <i class="fa-brands fa-github"></i> Go to Github</button></a>
+    <a href="{{user.html_url}}"><button class="btn" id="gobtn">  Go to Github <i class="fa-brands fa-github"></i></button></a>
 
 
   </div>

@@ -2,7 +2,6 @@ export class User {
   login: string;
   avatar_url: string;
   bio: string;
-  company: string;
   created_at: any;
   followers: number;
   following: number;
@@ -14,7 +13,6 @@ export class User {
     login: string,
     avatar_url: string,
     bio: string,
-    company: string,
     created_at: any,
     followers: number,
     following: number,
@@ -25,7 +23,6 @@ export class User {
     this.login = login;
     this.avatar_url = avatar_url;
     this.bio = bio;
-    this.company = company;
     this.created_at =created_at;
     this.followers = followers;
     this.following = following;

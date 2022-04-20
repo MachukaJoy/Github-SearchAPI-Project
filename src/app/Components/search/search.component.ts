@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
   searchingName: string = "";
   personalData: any;
   searchingname: any;
-  user:  User = new User("", "", "", "",0,0, 0,"",0, 0);
+  user:  User = new User("","", "",0,0, 0,"",0, 0);
   
   constructor(private userdetailsroute: Router, private dataservice: DataserviceService) { }
 
@@ -29,7 +29,6 @@ export class SearchComponent implements OnInit {
     this.user.login = data.login;  
     this.user.avatar_url = data.avatar_url;
     this.user.bio  = data.bio;
-    this.user.company = data.company;
     this.user.created_at= data.created_at;
     this.user.followers = data.followers
     this.user.following = data.following;

@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'date'
+  name: 'datepip'
 })
 export class DatePipe implements PipeTransform {
 
@@ -30,9 +30,9 @@ export class DatePipe implements PipeTransform {
         timeTimer = Math.floor(seconds / timeIntervals[sec]);
         if (timeTimer > 0)
           if (timeTimer === 1) {
-            return 'Updated' + timeTimer + ' ' + sec + ' ago';
+            return 'Updated ' + timeTimer + ' ' + sec + ' ago';
           } else {
-            return 'Updated' +'' + timeTimer + ''  + ' ' + sec + 's ago';
+            return 'Updated ' +'' + timeTimer + ''  + ' ' + sec + 's ago';
           }
       }
     }

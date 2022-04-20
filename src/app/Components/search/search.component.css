@@ -9,8 +9,14 @@
   outline: none;
   
   border-bottom: 1.5px solid  rgb(182, 91, 64);
-   
+}
 
+#info{
+  color:rgb(182, 91, 64);
+  background-color: rgb(238, 164, 127);
+  font-size: 25px;
+  font-weight: bold;
+  
 }
 #btnsearch {
   border: none;
@@ -23,4 +29,8 @@
 } 
 #gobtn{
   background-color: rgb(238, 164, 127);
+}
+h6{
+  color:rgb(182, 91, 64);
+  background-color: aquamarine;
 }
