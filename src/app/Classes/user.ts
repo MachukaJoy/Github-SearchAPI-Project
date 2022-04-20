@@ -7,8 +7,6 @@ export class User {
   followers: number;
   following: number;
   html_url: string;
-  location: string;
-  twitter_username: string;
   updated_at: any;
   public_repos: number;
 
@@ -20,9 +18,7 @@ export class User {
     created_at: any,
     followers: number,
     following: number,
-    html_url: string,
-    location: string,
-    twitter_username: string,
+    html_url: string,   
     updated_at: any,
     public_repos: number
   ) {
@@ -34,8 +30,6 @@ export class User {
     this.followers = followers;
     this.following = following;
     this.html_url = html_url;
-    this.location = location;
-    this.twitter_username = twitter_username;
     this.updated_at = updated_at;
     this.public_repos = public_repos;
 

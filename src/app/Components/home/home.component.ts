@@ -9,22 +9,20 @@ import { User } from 'src/app/Classes/user';
 })
 export class HomeComponent implements OnInit {
   user!: any; 
-  userRepositories!: any
+  userRepositories!: any;
 
-  constructor(private dataservice:DataserviceService) { }
+  constructor(private dataservice: DataserviceService) {}
 
   ngOnInit(): void {
-    this.dataservice.getGithubUserData().subscribe(
-      data => {
-        this.user = data
-  }
-    )
+    this.dataservice.getGithubUserData().subscribe((data) => {
+      this.user = data;
+      console.log(this.user);
+    });
 
     // My repositories
-    this.dataservice.getGithubUserRepoData().subscribe(data => {
-      this.userRepositories = data
+    this.dataservice.getGithubUserRepoData().subscribe((data) => {
+      this.userRepositories = data;
       console.log(this.userRepositories);
-    }
-    )
+    });
   }
 }

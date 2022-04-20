@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-light">
-  <form action="" class="container-fluid" role="form" #githubsearchform="ngForm" (ngSubmit)="getGithubUserData()">
+  <form action="" class="container-fluid" role="form" #githubsearchform="ngForm" ngSubmit = "getGithubUserData()" >
     <div class="input-group">
       <span class="input-group-text" id="basic-addon1">@</span>
       <input id ="search" type="text" class="form-control" [(ngModel)]="searchingName" name="searchingName" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
@@ -8,3 +8,31 @@
   </form>
 </nav>
 
+<div class="cointainer">
+  <div class="row" *ngIf="user">
+  <div class="col-md-4 mt-5 text-right">
+    <img id="avatar" src="{{user.avatar_url}}">
+
+
+  </div>
+  <div class="col-md-6 mt-5">
+    <h3 id = "info"class="text-uppercase"><em>User Info</em></h3>
+    <h6><b>Name :</b> {{user.login}}</h6>
+    <br>
+    <h6> <b>Bio</b> :<em><strong>{{user.bio}}</strong></em></h6>
+    <br>
+    <h6> <i class="fa-solid fa-people-group"> </i> {{user.followers}} Followers</h6>
+    <br>
+    <h6> <i class="fa-solid fa-person"></i> Following {{user.following}} </h6>
+    <br>
+    <h6> <i class="fa-solid fa-folder"></i> Repositories {{user.public_repos}} </h6>
+    <br>
+    <h6> <i class="fa-solid fa-calendar-check"></i> Last Update :{{user.updated_at |date}}</h6>
+    <br>
+    <a href="{{user.html_url}}"><button class="btn btn-outline-info"> <i class="fa-brands fa-github"></i> Go to Github</button></a>
+
+
+  </div>
+</div>
+
+</div>
