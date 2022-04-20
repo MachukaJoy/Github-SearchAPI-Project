@@ -1,14 +1,14 @@
-<nav class="navbar navbar-light bg-light">
-  <form action="" class="container-fluid" role="form" #githubsearchform="ngForm" ngSubmit = "getGithubUserData()" >
-    <div class="input-group">
-      <span class="input-group-text" id="basic-addon1">@</span>
-      <input id ="search" type="text" class="form-control" [(ngModel)]="searchingName" name="searchingName" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-      <button type="submit" class="btn btn-outline-danger d-block mx-auto">Search</button>
-    </div>
-  </form>
-</nav>
-
 <div class="cointainer">
+  <p><br><br><br></p>
+  <nav class="navbar navbar-light bg-light">
+    <form action="" class="container-fluid" role="form" #githubsearchform="ngForm" ngSubmit = "getGithubUserData()" >
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input id ="search" type="text" class="form-control" [(ngModel)]="searchingName" name="searchingName" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        <button type="submit" class="btn " id="btnsearch">Search</button>
+      </div>
+    </form>
+  </nav>
   <div class="row" *ngIf="user">
   <div class="col-md-4 mt-5 text-right">
     <img id="avatar" src="{{user.avatar_url}}">
@@ -16,20 +16,20 @@
 
   </div>
   <div class="col-md-6 mt-5">
-    <h3 id = "info"class="text-uppercase"><em appHighlight>User Info</em></h3>
+    <h3 id = "info"> Input user above to see results below:</h3><br>
     <h6><b>Name :</b> {{user.login}}</h6>
     <br>
     <h6> <b>Bio</b> :<em><strong>{{user.bio}}</strong></em></h6>
     <br>
-    <h6> <i class="fa-solid fa-people-group"> </i> {{user.followers}} Followers</h6>
+    <h6>  Followers {{user.followers}}</h6>
     <br>
-    <h6> <i class="fa-solid fa-person"></i> Following {{user.following}} </h6>
+    <h6> Following {{user.following}} </h6>
     <br>
-    <h6> <i class="fa-solid fa-folder"></i> Repositories {{user.public_repos}} </h6>
+    <h6> Repositories {{user.public_repos}} </h6>
     <br>
-    <h6> <i class="fa-solid fa-calendar-check"></i> Last Update :{{user.updated_at | date }</h6>
+    <h6> <i class="fa-solid fa-calendar-check"></i> Last Update :{{user.updated_at | date }}</h6>
     <br>
-    <a href="{{user.html_url}}"><button class="btn btn-outline-info"> <i class="fa-brands fa-github"></i> Go to Github</button></a>
+    <a href="{{user.html_url}}"><button class="btn" id="gobtn"> <i class="fa-brands fa-github"></i> Go to Github</button></a>
 
 
   </div>
