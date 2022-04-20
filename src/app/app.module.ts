@@ -10,7 +10,8 @@ import { HomeComponent } from './Components/home/home.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { UseraccountComponent } from './Components/useraccount/useraccount.component';
 import { HighlightDirective } from './highlight.directive';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { DatePipe } from './date.pipe'
 
 
 
@@ -21,7 +22,8 @@ import {FormsModule} from '@angular/forms'
     SearchComponent,
     HomeComponent,
     UseraccountComponent,
-    HighlightDirective
+    HighlightDirective,
+    DatePipe
   ],
   imports: [
     BrowserModule,
