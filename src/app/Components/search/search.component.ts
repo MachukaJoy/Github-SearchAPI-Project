@@ -10,42 +10,37 @@ import { User } from 'src/app/Classes/user';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  githubUsername!: string;
-  githubsearchForm!: FormGroup;
-  username:any; 
-  user: any;
+  // githubUsername!: string;
+  // githubsearchForm!: FormGroup;
+  // username:any; 
+  // user: any;
+  GithubUserData!: User;
   userRepositories: any;
-  getUser() {
-    this.githubUsername = this.githubsearchForm.value.githubUsername
+  searchingName: string = "";
+  personalData: any;
+  searchingname: any;
+  user: any;
+  // getUser() {
+  //   this.githubUsername = this.githubsearchForm.value.githubUsername
 
-    this.dataservice.updateusername(this.username)
+  //   this.dataservice.updateusername(this.username)
 
-    this.userdetailsroute.navigate([`user/${this.githubUsername}`])
-  }
+  //   this.userdetailsroute.navigate([`user/${this.githubUsername}`])
+  // }
 
   constructor(private userdetailsroute:Router, private dataservice:DataserviceService) { }
 
-  ngOnInit(): void {
-    this.githubsearchForm = new FormGroup({
-      githubUsername: new FormControl(
-        null,
-        [Validators.required]
+  ngOnInit(): void {}
+    getGithubUserData(){
+      this.dataservice.getGithubUserData().subscribe(
+        data => {
+          this.user = data
+          this.userdetailsroute.navigate(['/detailsComponent']);
+          console.log( this.user)
+        }
       )
-    })
-    this.dataservice.getGithubUserData().subscribe(
-      data => {
-        this.user = data
-      // console.log( this.user)
-  }
-    )
 
-    // My repositories
-    this.dataservice.getGithubUserRepoData().subscribe(
-      data => {
-        this.userRepositories = data
-      console.log( this.userRepositories)
-  }
-    )
+  
   }
 
 }

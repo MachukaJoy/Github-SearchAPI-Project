@@ -9,6 +9,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './Components/home/home.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { UseraccountComponent } from './Components/useraccount/useraccount.component';
+import { HighlightDirective } from './highlight.directive';
+import {FormsModule} from '@angular/forms'
+
 
 
 @NgModule({
@@ -17,13 +20,15 @@ import { UseraccountComponent } from './Components/useraccount/useraccount.compo
     NavbarComponent,
     SearchComponent,
     HomeComponent,
-    UseraccountComponent
+    UseraccountComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

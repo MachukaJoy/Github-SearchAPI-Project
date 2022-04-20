@@ -2,7 +2,7 @@
 
   <div class="container-fluid bg-light">
     <div class="text-center">
-      <P class="lead">Know other people via Git search</P>
+      <P class="lead">Git Hub search </P>
     </div>
     <div class="row">
       <div class="col-md-4 " id="profile" *ngIf = "user">
@@ -22,7 +22,7 @@
         <div class="col-md-12">
           <ul *ngFor="let userRepository of userRepositories" id="ul">
             <li class="list">
-              <div class="card col-md-6">
+              <div class="card col-md-6" appHighlight>
                 <div class="card-title text-center fw-bold">{{userRepository.name}}</div>
                 <div class="card-body">{{userRepository.description}}
                     <br>
