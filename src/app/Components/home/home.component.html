@@ -2,23 +2,23 @@
 
   <div class="container-fluid bg-light">
     <div class="text-center">
-      <P class="lead">Git Hub search </P>
+      <P class="lead">Git Hub search using API </P>
     </div>
     <div class="row">
-      <div class="col-md-4 " id="profile" *ngIf = "user">
-        <h3 id="name" class="d-flex justify-content-end">{{user.name}}</h3>
+      <div class="col-md-4 "id="profile" *ngIf = "user">
+        <h3 id="name">{{user.name}}</h3>
         <img src="{{user.avatar_url}}" alt="github Profile image">
-        <h6 class="d-flex justify-content-end">{{user.bio}}</h6>
-        <h6 class="d-flex justify-content-end">Date joined:<b>{{user.created_at | date}}</b></h6>
-        <h6 class="d-flex justify-content-end"> Repositories : <b>{{user.public_repos}}</b></h6>
-        <h6 class="d-flex justify-content-end"><i class="fa-solid fa-people-group"></i> {{user.followers}} Followers</h6> 
-        <h6 class="d-flex justify-content-end"><i class="fa-solid fa-person">{{user.following}} Following</i></h6>
-        <a class = "d-flex justify-content-end" href="{{user.html_url}}"><button class="btn btn-primary">view from Github</button></a>
+        <h6>{{user.bio}}</h6>
+        <h6>Date joined:<b>{{user.created_at | date}}</b></h6>
+        <h6> Repositories : <b>{{user.public_repos}}</b></h6>
+        <h6> {{user.followers}} Followers</h6> 
+        <h6> {{user.following}} Following</h6>
+        <a href="{{user.html_url}}"><button class="btn btn-warning">view from Github</button></a>
 
       </div>
 
       <div class="col-md-8">
-        <h3 class='text-center'>{{user.name}}'s Repositories</h3>
+        <h3 class='text-center'>{{user.name}} Repositories</h3>
         <div class="col-md-12">
           <ul *ngFor="let userRepository of userRepositories" id="ul">
             <li class="list">
